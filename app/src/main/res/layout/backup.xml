@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <org.opencv.android.JavaCameraView
+        android:id="@+id/fd_activity_surface_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="visible"
+        android:layout_alignBottom="@+id/button" />
+
+    <SurfaceView
+        android:id="@+id/surfView"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:visibility="visible"
+        android:layout_below="@+id/fd_activity_surface_view"
+        android:layout_alignRight="@+id/button_switch"
+        android:layout_alignEnd="@+id/button_switch" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:onClick="onRecreateClick"
+        android:text="Recreate"
+        android:id="@+id/button"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/seekbars"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_below="@+id/timer_button">
+
+        <SeekBar
+            android:id="@+id/methodSeekBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:max="5"
+            android:paddingLeft="5dip"
+            android:paddingRight="10dip"
+            android:progress="500"
+            android:visibility="invisible"
+            android:indeterminate="false"></SeekBar>
+
+        <TextView
+            android:id="@+id/method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/seekbars"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dp"
+            android:text="method"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/textView_clock"
+            android:textStyle="bold|normal|italic"
+            android:textSize="20dp"
+            android:layout_alignTop="@+id/button_switch"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pause"
+        android:id="@+id/button_pause_play"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EYE_off"
+        android:id="@+id/button_eye_on_off"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textStyle="bold|normal|italic"
+        android:textSize="15dp"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2"
+        android:text="Test" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="timer"
+        android:id="@+id/timer_button"
+        android:layout_below="@+id/surfView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textView2"
+        android:textStyle="bold|normal|italic"
+        android:textSize="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Switch"
+        android:id="@+id/button_switch"
+        android:layout_below="@+id/surfView"
+        android:layout_alignRight="@+id/button_eye_on_off"
+        android:layout_alignEnd="@+id/button_eye_on_off" />
+
+</RelativeLayout>
